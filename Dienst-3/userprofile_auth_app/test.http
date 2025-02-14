@@ -1,0 +1,13 @@
+POST http://localhost:8081/api/v1/user-service/register
+Content-Type: application/json
+
+{
+  "username": "TestUser",
+  "password": "geheimesPasswort",
+  "location": "Berlin",
+  "email": "max@mustermann.de",
+  "preferredCategory": "Sonstiges"
+}
+
+###
+GET http://localhost:8081/api/v1/user-service/login?username=TestUser&password=geheimesPasswort

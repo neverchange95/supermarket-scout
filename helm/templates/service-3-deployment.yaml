@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-3
+  labels:
+    app: service-3
+spec:
+  replicas: {{ .Values.service3.replicas }}
+  selector:
+    matchLabels:
+      app: service-3
+  template:
+    metadata:
+      labels:
+        app: service-3
+    spec:
+      containers:
+        - name: service-3
+          image: {{ .Values.service3.image }}
+          ports:
+            - containerPort: 8081
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: "jdbc:postgresql://database:5432/cnd-project-db"
+            - name: SPRING_DATASOURCE_USERNAME
+              value: "admin"
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: "secret"

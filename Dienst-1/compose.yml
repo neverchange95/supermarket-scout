@@ -1,0 +1,4 @@
+services:
+  etl-service:
+    image:  etl-service:latest
+    build: .

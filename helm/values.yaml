@@ -1,0 +1,32 @@
+database:
+  image: postgres:latest
+  replicas: 1
+  env:
+    POSTGRES_DB: "cnd-project-db"
+    POSTGRES_USER: "admin"
+    POSTGRES_PASSWORD: "secret"
+  storage: 5Gi
+
+service1:
+  image: shivashantii/service-1
+  replicas: 1
+
+service2:
+  image: shivashantii/service-2
+  replicas: 1
+
+service3:
+  image: shivashantii/service-3
+  replicas: 1
+
+ingress:
+  enabled: true
+  host: localhost
+  ingress-nginx:
+    controller:
+      service:
+        ports:
+          http: 80
+          https: 8443
+      ingressClassResource:
+        default: true

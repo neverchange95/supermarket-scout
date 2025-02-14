@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-1
+  labels:
+    app: service-1
+spec:
+  replicas: {{ .Values.service1.replicas }}
+  selector:
+    matchLabels:
+      app: service-1
+  template:
+    metadata:
+      labels:
+        app: service-1
+    spec:
+      containers:
+        - name: service-1
+          image: {{ .Values.service1.image }}
+          ports:
+            - containerPort: 8000
+          env:
+            - name: DB_HOST
+              value: "database"
+            - name: DB_PORT
+              value: "5432"
+            - name: DB_NAME
+              value: "cnd-project-db"
+            - name: DB_USER
+              value: "admin"
+            - name: DB_PASSWORD
+              value: "secret"

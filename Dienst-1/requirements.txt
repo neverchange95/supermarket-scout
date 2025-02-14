@@ -1,0 +1,16 @@
+# Web-Scraping
+requests==2.32.3
+beautifulsoup4==4.12.3
+
+# PostgreSQL-Anbindung
+psycopg2-binary==2.9.10
+sqlalchemy==2.0.37
+
+# Konfiguration über Environment-Variablen
+python-dotenv==1.0.1
+
+# Scheduler
+schedule==1.2.2
+
+# Für Unit-Tests
+pytest==8.3.4
