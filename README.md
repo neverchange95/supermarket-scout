@@ -1,6 +1,3 @@
-# ! Important !
-For Docker and Kubernetes/Helm, please only use the services and frontend from this repository. Otherwise, you will have to make adjustments to the request URLs in the frontend and in the application properties for database connection of the services.
-
 # Overview
 
 This repository contains the deployment configuration for all services. The included docker-compose.yml file sets up, builds, and launches all containers. The folder k8s contains the kubernetes manifests itself and the folder helm contains all helm configurations.
@@ -61,9 +58,6 @@ helm upgrade --install ingress-nginx ingress-nginx \
 ```
 
 # Helm:
-### ! Important !
-If you have already manually installed the Nginx Helm controller in your Kubernetes cluster, you must remove it before running the Helm charts.
-
 
 ### Installtion steps
 1. Complete steps 1 and 2 from the `Kubernetes` section if not already done. Alternatively, you can use the already built images from docker hub (user: shivashantii). As a rule, you would not have to make any changes to do this. the images are already set correctly.
