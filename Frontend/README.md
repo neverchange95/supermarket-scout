@@ -32,19 +32,19 @@ docker run -p 3000:3000 --name frontend frontend-image
 
 # Screenshots
 ### Landing page
-<img src="/screenshots/landing-page.png">
+<img src="/Frontend/screenshots/landing-page.png">
 
 # Use `Dienst-3`
 ### User registration
-<img src="/screenshots/registration-page.png">
+<img src="/Frontend/screenshots/registration-page.png">
 
 ### User authentication
-<img src="/screenshots/auth-page.png">
+<img src="/Frontend/screenshots/auth-page.png">
 
 # Use `Dienst-2`
 ### Cheapest product from a preferred category
-<img src="/screenshots/landing_dashboard.png">
+<img src="/Frontend/screenshots/landing_dashboard.png">
 
 ### Search by productname and location
-<img src="/screenshots/query_dashboard.png">
+<img src="Frontend/screenshots/query_dashboard.png">
 
