@@ -46,5 +46,5 @@ docker run -p 3000:3000 --name frontend frontend-image
 <img src="/Frontend/screenshots/landing_dashboard.png">
 
 ### Search by productname and location
-<img src="Frontend/screenshots/query_dashboard.png">
+<img src="/Frontend/screenshots/query_dashboard.png">
 
