@@ -1,4 +1,4 @@
-name: Dienst-1-CI 
+name: Service-1-CI
 
 on:
   push:
