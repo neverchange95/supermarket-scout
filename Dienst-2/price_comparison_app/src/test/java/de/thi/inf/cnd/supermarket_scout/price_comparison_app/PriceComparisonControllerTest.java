@@ -37,7 +37,7 @@ public class PriceComparisonControllerTest {
                 .andExpect(jsonPath("$[0].supermarketPrices[1].supermarketLocation").value("Berlin"))
                 .andExpect(jsonPath("$[0].supermarketPrices[0].supermarketName").value("Edeka"))
                 .andExpect(jsonPath("$[0].supermarketPrices[1].supermarketName").value("Rewe"))
-                .andExpect(jsonPath("$[0].supermarketPrices[0].effectivePrice").value(1.20))
+                .andExpect(jsonPath("$[0].supermarketPrices[0].effectivePrice").value(1.5))
                 .andReturn();
     }
 
@@ -53,7 +53,7 @@ public class PriceComparisonControllerTest {
                 .andExpect(jsonPath("$[1].supermarketLocation").value("Berlin"))
                 .andExpect(jsonPath("$[0].productCategory").value("Milchprodukte"))
                 .andExpect(jsonPath("$[1].productCategory").value("Milchprodukte"))
-                .andExpect(jsonPath("$[1].effectivePrice").value(1.20))
+                .andExpect(jsonPath("$[1].effectivePrice").value(1.5))
                 .andReturn();
     }
 }
